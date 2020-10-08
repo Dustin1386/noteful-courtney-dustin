@@ -1,3 +1,6 @@
+import React, {Component} form 'react'
+import Note
+
 class SsnForm extends React.Component {
     // Input values in state
     state = {ssn: {value: ''}};
