@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import NotefulForm from '../NotefulForm/NotefulForm'
 import ValidateForm from '../ValidateForm'
+import PropTypes from 'prop-types';
 import config from '../config'
 
 
@@ -101,5 +102,8 @@ export default class AddFolder extends Component {
     )
   }
 }
+AddFolder.propTypes = {
+  history: PropTypes.object.isRequired
+};
 
 
