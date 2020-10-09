@@ -88,6 +88,10 @@ export default class AddFolder extends Component {
             <button type="submit" disable={!this.state.formValid}>
               New Folder 4 You
             </button>
+            <button type='button' onClick={this.props.history.goBack}>
+              Cancel
+            </button>
+            
             
           </div>
 
