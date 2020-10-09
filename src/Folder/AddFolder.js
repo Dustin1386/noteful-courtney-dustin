@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import NotefulForm from '../NotefulForm/NotefulForm'
+import ValidateForm from '../ValidateForm'
 import config from '../config'
 
 
@@ -77,18 +78,17 @@ export default class AddFolder extends Component {
               Name
                     </label>
             <input type="text" id="folder-name-input" name='folder-name' onChange={e => this.updateName(e.target.value)} />
-            {/* <ValidateForm className="validationError" hasError={!this.state.name} message={this.validateName()}></ValidateForm> */}
+            <ValidateForm className="validationError" hasError={!this.state.name} message={this.validateName()}></ValidateForm>
 
             {/* utilize after adding in validation component  */}
-            
-            {/* {validationMessage.name.length > 0 && (
+
+            {validationMessage.name.length > 0 && (
               <ValidateForm className="validationError" hasError={!this.state.name} message={this.validateName()}></ValidateForm>
-            )} */}
-
-
+            )}
             <button type="submit" disable={!this.state.formValid}>
               New Folder 4 You
-                    </button>
+            </button>
+            
           </div>
 
         </NotefulForm>
@@ -97,4 +97,5 @@ export default class AddFolder extends Component {
     )
   }
 }
+
 
